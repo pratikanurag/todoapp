@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Todo</title>
+    </head>
+    <body>
+        <h1>Todo-list</h1>
+        <a href="/todoapp/add">Add</a>
+        <ul>
+            {%for todo in todo%}
+                <li><a href="/todoapp/details/{{todo.id}}">{{todo.title}}</a>: {{todo.text}}</li>
+                {%endfor%}
+        </ul>
+    </body>
+</html>
